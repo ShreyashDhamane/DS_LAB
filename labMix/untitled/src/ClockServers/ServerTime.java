@@ -24,4 +24,14 @@ public interface ServerTime extends Remote {
 
     public boolean authenticateStudent(String username, String password) throws RemoteException;
     public boolean createStudent(String username, String password) throws RemoteException;
+
+    int getPid() throws RemoteException;
+
+    void setCoordinatorFlag(boolean b) throws RemoteException;
+
+    void setDownflag(boolean b) throws RemoteException;
+
+    boolean isDownflag() throws RemoteException;
+
+    boolean isCoordinatorFlag() throws RemoteException;
 }

@@ -9,6 +9,7 @@ public interface AppConstants {
 
     // machines server configuration
     public final String SERVER_NAME = "localhost";
+    public final int MAIN_SERVER_PORT = 8000;
     public final int SERVER_PORT_1 = 1500;
     public final int SERVER_PORT_2 = 1501;
     public final int SERVER_PORT_3 = 1502;

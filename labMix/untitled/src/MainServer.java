@@ -13,13 +13,35 @@ import java.util.ArrayList;
 import static common.AppConstants.formatter;
 
 // unicast remote object is a remote object that can only be accessed by one client at a time
-public class MainServer extends UnicastRemoteObject implements studentLogin {
-    public MainServer() throws RemoteException {
-        super();
-    }
+public class MainServer extends UnicastRemoteObject implements studentLogin, ServerTime {
 
+    int pid = 4;
+    private LocalTime localTime;
+    boolean isProcessCoordinator = true, isProcessDown = false;
+
+    public MainServer(LocalTime localTime, int pid) throws RemoteException {
+        super();
+        this.localTime = localTime;
+        this.pid = pid;
+    }
     //can use hashmaps,
     public static ArrayList<Student> students = new ArrayList<Student>();
+
+    @Override
+    public LocalTime getLocalTime() throws RemoteException {
+        return localTime;
+    }
+
+    @Override
+    public void adjustTime(LocalTime localTime, long avgDiff) throws RemoteException {
+        long localTimeNanos = localTime.toNanoOfDay();
+        long thisNanos = getLocalTime().toNanoOfDay();
+        var newNanos = thisNanos - localTimeNanos;
+        newNanos = newNanos * -1 + avgDiff + thisNanos;
+        LocalTime newLocalTime = LocalTime.ofNanoOfDay(newNanos);
+        this.localTime = newLocalTime;
+        System.out.println("Updated time: " + AppConstants.formatter.format(newLocalTime));
+    }
 
     @Override
     public boolean authenticateStudent(String username, String password) throws RemoteException {
@@ -50,11 +72,36 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
         return success;
     }
 
+
+    public int getPid() {
+        return this.pid;
+    }
+
+    @Override
+    public boolean isCoordinatorFlag() {
+        return isProcessCoordinator;
+    }
+    @Override
+    public void setCoordinatorFlag(boolean isProcessCoordinator) {
+        this.isProcessCoordinator = isProcessCoordinator;
+    }
+
+    @Override
+    public void setDownflag(boolean downflag) {
+        this.isProcessDown = downflag;
+    }
+
+    @Override
+    public boolean isDownflag() {
+        return isProcessDown;
+    }
+
     public static void main(String[] args) {
-        String serverName = "StudentTeacherPortal";
         try {
-            Registry reg = LocateRegistry.createRegistry(8000);
-            reg.rebind(serverName, new MainServer());
+            LocalTime hour = LocalTime.parse(AppConstants.LOCAL_HOUR, formatter);
+            ServerTimeImpl machineServer = new ServerTimeImpl(hour, 4);
+            Registry reg = LocateRegistry.createRegistry(AppConstants.MAIN_SERVER_PORT);
+            reg.rebind(ServerTimeImpl.class.getSimpleName(), machineServer);
             System.out.println("Server is running...");
 
             Student student = new Student("shreyash", "password");
@@ -74,7 +121,7 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
             ServerTime machine1Server = createMachineServer(1);
             ServerTime machine2Server = createMachineServer(2);
             ServerTime machine3Server = createMachineServer(3);
-
+            ServerTime machine4Server = createMachineServer(4);
             // calculate the average of the hours
             var avgDiff = generateAverageTime(localTime,
                     machine1Server.getLocalTime(),
@@ -85,6 +132,7 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
             machine1Server.adjustTime(localTime, avgDiff);
             machine2Server.adjustTime(localTime, avgDiff);
             machine3Server.adjustTime(localTime, avgDiff);
+            machine4Server.adjustTime(localTime, avgDiff);
             localTime = localTime.plusNanos(avgDiff);
 
             System.out.println("\nUpdated schedules!");
@@ -95,6 +143,8 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
         } catch (Exception ex) {
             System.out.println(ex);
         }
+
+//
     }
 
     //	/**
@@ -105,7 +155,7 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
 //* @return machine server with its time
 //* @throws Exception when trying to create server or record
 //*/
-    private static ServerTime createMachineServer(int machineNumber) throws Exception {
+    public static ServerTime createMachineServer(int machineNumber) throws Exception {
         String serverName = AppConstants.SERVER_NAME;
         int serverPort = 0;
         if(machineNumber == 1){
@@ -114,7 +164,10 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
             serverPort = AppConstants.SERVER_PORT_2;
         }else if(machineNumber == 3){
             serverPort = AppConstants.SERVER_PORT_3;
-        }else{
+        }else if(machineNumber == 4){
+            serverPort = AppConstants.MAIN_SERVER_PORT;
+        }
+        else{
             serverPort = -1;
         }
         Registry machineRegistry = LocateRegistry.getRegistry(serverName, serverPort);
@@ -142,5 +195,9 @@ public class MainServer extends UnicastRemoteObject implements studentLogin {
         }
         return difServer / (times.length + 1);
     }
+
+
+
+    //elect new leader
 
 }

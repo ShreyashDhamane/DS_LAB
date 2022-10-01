@@ -14,11 +14,10 @@ import static common.AppConstants.formatter;
  * Representation of machine 2 to have its time set.
  */
 public class Machine2 {
-
     public static void main(String[] args) {
         try {
             LocalTime hour = LocalTime.parse(AppConstants.MACHINE_2_HOUR, formatter);
-            ServerTime machineServer = new ServerTimeImpl(hour);
+            ServerTime machineServer = new ServerTimeImpl(hour, 2);
             Registry registry = LocateRegistry.createRegistry(AppConstants.SERVER_PORT_2);
             registry.rebind(ServerTimeImpl.class.getSimpleName(), machineServer);
             System.out.println(String.format("Machine 2 started on port %d [local time: %s].",

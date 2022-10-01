@@ -12,15 +12,16 @@ import java.util.ArrayList;
 // */
 @SuppressWarnings("serial")
 public class ServerTimeImpl extends UnicastRemoteObject implements ServerTime {
-
+    public int pid;
+    boolean isProcessCoordinator = false, isProcessDown = false;
     private LocalTime localTime;
     public static ArrayList<Student> students = new ArrayList<Student>();
 
-    public ServerTimeImpl() throws RemoteException {
+
+    public ServerTimeImpl(LocalTime localTime, int pid) throws RemoteException {
         super();
-    }
-    public ServerTimeImpl(LocalTime localTime) throws RemoteException {
         this.localTime = localTime;
+        this.pid = pid;
     }
     @Override
     public boolean authenticateStudent(String username, String password) throws RemoteException {
@@ -68,5 +69,27 @@ public class ServerTimeImpl extends UnicastRemoteObject implements ServerTime {
         System.out.println("Updated time: " + AppConstants.formatter.format(newLocalTime));
     }
 
+
+    public int getPid() {
+        return pid;
+    }
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
+    public boolean isCoordinatorFlag() {
+        return isProcessCoordinator;
+    }
+
+    public void setCoordinatorFlag(boolean isProcessCoordinator) {
+        this.isProcessCoordinator = isProcessCoordinator;
+    }
+
+    public boolean isDownflag() {
+        return isProcessDown;
+    }
+
+    public void setDownflag(boolean downflag) {
+        this.isProcessDown = downflag;
+    }
 }
 
