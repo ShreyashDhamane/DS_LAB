@@ -14,6 +14,7 @@ public interface AppConstants {
     public final int SERVER_PORT_2 = 1501;
     public final int SERVER_PORT_3 = 1502;
 
+
     // schedules
     public final String LOCAL_HOUR = "07:00:00";
     public final String MACHINE_1_HOUR = "10:05:00";

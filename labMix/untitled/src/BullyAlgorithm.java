@@ -90,6 +90,7 @@ public class BullyAlgorithm extends UnicastRemoteObject {
         if((ed.getPid()) == leader.getPid()) {
             ServerTime oldLeader = leader;
             (oldLeader).setDownflag(false);
+//            leader = pl.get(ed.getPid()-1);
             leader = pl.get(ed.getPid()-2);
             ProcessElection.setElectionFlag(false);
             leader.setCoordinatorFlag(true);
@@ -112,10 +113,15 @@ public class BullyAlgorithm extends UnicastRemoteObject {
     public static void pingLeader(ArrayList<ServerTime> pl, ServerTime leader) throws RemoteException {
         Random random = new Random();
         int r = random.nextInt(4) + 1;
+        System.out.println('r');
+        System.out.println(r);
         int j = 0;
         while(ProcessElection.isPingLeaderFlag()) {
             for(int i = 0; i<pl.size(); i++) {
                 ServerTime p = pl.get(i);
+                System.out.println("pid");
+                System.out.println(p.getPid());
+                System.out.println(p.isCoordinatorFlag());
                 if(!(p.isCoordinatorFlag())) {
                     System.out.println("P" + p.getPid() + ": Coordinator, are you there?");
                     j++;

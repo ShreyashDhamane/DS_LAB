@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf018118-7e13-4529-b928-3d2c15d02d59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../DataConsistency/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistency/src/Monitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistency/src/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistency/src/Writer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistencyAdv/File1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistencyAdv/File2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataConsistencyAdv/File3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/.idea/libraries/Suzuki_kasami_RMI.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ME/ME.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/client/ClientNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/client/ClientStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/Scalable-Server-Design/src/main/java/cs455/scaling/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/client/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/client/ClientNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/client/ClientStatistics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/scaling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/server/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/server/ServerNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/server/ServerStatistics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/task/BatchTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/task/BatchTaskManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/task/ClientRegistrationTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/task/ReadAndRespondTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/threadpool/Task.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/threadpool/ThreadPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/threadpool/WorkerThread.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/util/LOGGER.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/util/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/out/production/scaling/cs455/scaling/wireformats/Protocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/scaling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/server/ServerNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/server/ServerStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/src/main/java/cs455/scaling/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/task/BatchTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/task/BatchTaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/task/ClientRegistrationTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/task/ReadAndRespondTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/threadpool/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/threadpool/ThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/threadpool/WorkerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/util/LOGGER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scalable-Server-Design/wireformats/Protocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bully_Algorithm" beforeDir="false" afterPath="$PROJECT_DIR$/../Bully_Algorithm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labMix/out/production/labMix/BullyAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../labMix/out/production/labMix/BullyAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labMix/untitled/src/BullyAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../labMix/untitled/src/BullyAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labMix/untitled/src/common/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../labMix/untitled/src/common/AppConstants.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2I4Wm8sycsssncvbtq78mZG6GkJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/college stuff/sem5/DS/Scalable-Server-Design/Scalable-Server-Design"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs455.scaling.server.Server" />
+      <module name="scaling" />
+      <option name="PROGRAM_PARAMETERS" value="8000 10 1 1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs455.scaling.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs455.scaling.client.Client" />
+      <module name="scaling" />
+      <option name="PROGRAM_PARAMETERS" value="0.0.0.0 8000 8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="scaling" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="scaling" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf018118-7e13-4529-b928-3d2c15d02d59" name="Changes" comment="" />
+      <created>1669441492014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669441492014</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
